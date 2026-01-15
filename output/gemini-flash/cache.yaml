@@ -1,0 +1,13 @@
+parameters:
+- name: cache_capacity
+  description: Cache capacity
+  type: integer
+  constraints: []
+- name: cache_organization
+  description: Cache organization
+  type: structure
+  constraints: []
+- name: cache_block_size
+  description: Cache block size
+  type: integer
+  constraints: []

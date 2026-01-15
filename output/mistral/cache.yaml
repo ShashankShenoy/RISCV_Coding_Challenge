@@ -1,0 +1,14 @@
+parameters:
+- name: cache_block_size_(initial_cmo_extensions)
+  description: Cache block size (initial cmo extensions)
+  type: integer
+  constraints:
+  - must be uniform across the system
+- name: cache_capacity
+  description: Cache capacity
+  type: integer
+  constraints: []
+- name: cache_organization
+  description: Cache organization
+  type: structure
+  constraints: []
