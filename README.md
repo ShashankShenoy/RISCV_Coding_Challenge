@@ -63,23 +63,36 @@ parameters: []
 ## Project Structure
 ```
 RISC-V/
-├── capabilities/                  # Extraction logic (e.g., ExtractParameters)
-├── llm/                           # LLM wrappers (Ollama, Gemini, etc.)
-├── mcp/                           # MCP registry, server, validation
-├── output/                        # YAML results for each model
+├── capabilities/                 # Extraction logic (e.g., ExtractParameters)
+│   ├── base.py
+│   ├── extract_parameters.py
+├── env/                          # Python virtual environment
+├── llm/                          # LLM wrappers (Ollama, Gemini, etc.)
+│   ├── base.py
+│   ├── gemini_cli.py
+│   ├── gemini_flash.py
+│   ├── ollama.py
+│   ├── ollama_cloud.py
+├── mcp/                          # MCP registry, server, validation
+│   ├── registry.py
+│   ├── server.py
+│   ├── validation.py
+├── output/                       # YAML results for each model
+│   ├── gemini-flash/
 │   ├── gpt-oss/
 │   ├── mistral/
-│   └── gemini-flash/
-├── prompts/                       # Prompt templates for each model
+│   └── phi3/
+├── prompts/                      # Prompt templates for each model
 │   ├── extract_parameters.txt
 │   └── extract_parameters_mistral.txt
-├── schemas/                       # JSON schema for output validation
+├── requirements.txt              # Python dependencies
+├── run.py                        # Main entry point
+├── schemas/                      # JSON schema for output validation
 │   └── param_schema.json
-├── snippets/                      # Input text snippets
-├── requirements.txt               # Python dependencies
-├── run.py                         # Main entry point
-├── test_generalization.py         # Generalization/hallucination test script
-└── README.md                      # This file
+├── snippets/                     # Input text snippets
+│   ├── cache.txt
+│   └── csr.txt
+└── README.md                     # Project documentation
 ```
 
 ## Usage
