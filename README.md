@@ -60,8 +60,6 @@ parameters: []
 ```
 
 
-> **Note:** The TLB/superpages example in the YAML output section is illustrative and not from an actual run. Only the cache and CSR examples have been tested and validated in this project. If you wish to validate additional cases, you can add them to the input snippets and rerun the extraction.
-
 ## Project Structure
 ```
 RISC-V/
