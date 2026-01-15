@@ -99,6 +99,52 @@ RISC-V/
    python test_generalization.py
    ```
 
+## Selective Snippet Execution with CLI Flags
+
+You can use command-line flags to run extraction only on specific snippets. For example:
+
+- To run all snippets (default):
+  ```sh
+  python run.py gpt-oss
+  ```
+- To run only the 'cache' and 'csr' snippets:
+  ```sh
+  python run.py gpt-oss --snippets cache csr
+  ```
+
+This makes it easy to test or process only the snippets you want, without editing the code or input files.
+
+## Features & Improvements
+
+This project includes the following key features and enhancements:
+
+- **Modular Capability Registry:** Easily add new extraction or analysis capabilities by creating new classes in the `capabilities/` directory.
+- **Dynamic Snippet Discovery:** All `.txt` files in the `snippets/` directory are automatically loaded and processed.
+- **CLI Arguments for Model and Snippet Selection:** Select which model and which snippets to process via command-line flags.
+- **Prompt Specialization:** Use different prompts for different models (e.g., stricter prompt for Mistral).
+- **Schema Validation:** All outputs are validated against `schemas/param_schema.json` to ensure correctness.
+- **Generalization and Hallucination Testing:** Includes a script to test prompt generalization and minimize hallucination.
+- **Error Handling:** Improved error messages for missing files, extraction failures, and output write errors.
+- **Extensible Project Structure:** Easy to add new capabilities, models, prompts, snippets, and validation logic.
+- **Comprehensive Documentation:** README explains project structure, extension paths, CLI usage, and all major features.
+
+These features make the project robust, flexible, and easy to extend or maintain for future work and experimentation.
+
+## Future Improvements
+
+Potential enhancements for this project include:
+
+- **Automated Output Auditing:** Add a script to re-validate all YAML outputs against the schema for batch auditing and regression testing.
+- **Advanced Benchmarking:** Integrate detailed benchmarking for extraction accuracy, speed, and hallucination rates across models and prompts.
+- **Web or CLI User Interface:** Develop a simple interface for users to submit new snippets and view results interactively.
+- **Plugin System for Capabilities:** Allow capabilities to be registered via plugins or config files for even easier extensibility.
+- **Expanded Test Suite:** Add more unit and integration tests for edge cases, error handling, and new capabilities.
+- **Enhanced Logging:** Use Python’s logging module for structured event and error tracking.
+- **Support for More LLMs:** Integrate additional models and prompt templates as new LLMs become available.
+- **Documentation Expansion:** Add troubleshooting, FAQ, and more usage examples to the README as the project grows.
+
+These improvements will make the project even more robust, user-friendly, and adaptable to future requirements.
+
 ## License
 MIT
 
