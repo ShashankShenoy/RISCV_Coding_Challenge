@@ -59,22 +59,6 @@ parameters:
 parameters: []
 ```
 
-**Example 3: TLB and superpages**
-```yaml
-parameters:
-- name: translation_lookaside_buffer_tlb_size
-  description: Translation lookaside buffer (tlb) size
-  type: integer
-  constraints: []
-- name: tlb_associativity
-  description: Tlb associativity
-  type: integer
-  constraints: []
-- name: superpages_support
-  description: Superpages support
-  type: boolean
-  constraints: []
-```
 
 > **Note:** The TLB/superpages example in the YAML output section is illustrative and not from an actual run. Only the cache and CSR examples have been tested and validated in this project. If you wish to validate additional cases, you can add them to the input snippets and rerun the extraction.
 
