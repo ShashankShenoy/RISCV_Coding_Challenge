@@ -60,8 +60,7 @@ parameters: []
 ```
 
 
-## Current Project Directory Structure
-
+## Project Structure
 ```
 RISC-V/
 ├── capabilities/                 # Extraction logic (e.g., ExtractParameters)
